@@ -31,7 +31,7 @@ public class MultiDiscountPromotion implements Promotion {
 		List<CheckoutItem> itemsUnderPromotion = items.stream().filter(checkoutItem -> checkoutItem.getProductCode().equals(productCode)).
 				collect(Collectors.toList());
 		int productUnderPromotionCount = itemsUnderPromotion.size();
-		//if itemCountForDiscount has been reached, set the price of the item s on offer to discounted price
+		//if itemCountForDiscount has been reached, set the price of the items on offer to discounted price
 		if(productUnderPromotionCount >= itemCountForDiscount) {
 			itemsUnderPromotion.forEach(item -> item.setPrice(discountedPrice));	
 		}

@@ -23,6 +23,7 @@ class MultiDiscountPromotionTest {
 
 	@BeforeEach
 	void setUp() throws Exception {
+	
 	}
 
 	@ParameterizedTest

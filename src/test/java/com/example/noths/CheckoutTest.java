@@ -29,12 +29,14 @@ class CheckoutTest {
 		promotionalRules.add(new MultiDiscountPromotion(MockData.TRAVEL_CARD_HOLDER.getProductCode(), 
 				2, BigDecimal.valueOf(8.50)));
 		promotionalRules.add(new PercentOffPromotion(BigDecimal.valueOf(60), BigDecimal.valueOf(10)));
+		//Assign the promotion list into the Checkout
 		checkout = new Checkout(promotionalRules);
 	}
 
 	@ParameterizedTest
 	@MethodSource("parameterisedTest")
 	void testCheckout(List<Product> products, double expectedPrice) {
+		//scan the products into the checkout which converts them into CheckoutItem
 		products.forEach(product -> checkout.scan(product));
 		Double price = checkout.total();
 		assertEquals(expectedPrice, price);
