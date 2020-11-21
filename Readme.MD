@@ -1,4 +1,5 @@
-Project Title : Not on the High Street exercise
+Project Title : Shopping checkout with promotions
+
 Project type: Maven project
 
 Running the test :
