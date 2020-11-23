@@ -10,6 +10,10 @@ Project design description:
 5. The Promotion interface is implemented by the specific promotion. Each implementation of the promotion would implement the void applyOffer(ShoppingBasket basket) method and apply the promotion on the items in the shopping basket and update the total price.
 6. For any new promotion required, a new implementation of the Promotion interface can be added to the Checkout by invoking the addPromotionalRule(Promotion promotionalRule) method. The order of the promotion applied is managed by the order they are added to the Checkout promotionRules list.
 
+Possible Improvements:
+1. Logging (for example using log4j)
+2. Throwing user defined exception for any specific exception
+
 Running the test :
 
 Open the project in eclipse/IntelliJ as a maven project
